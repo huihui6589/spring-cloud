@@ -1,0 +1,56 @@
+﻿git config --global user.name "tom"//设置name
+git config --global user.email 418680861@qq.com//设置邮箱
+git config --list//查看配置信息
+//git init//使用当前目录作为Git仓库
+//git newrepo//使用newrepo目录作为Git仓库
+git init spring-cloud-lht//使用spring-cloud-lht目录作为Git仓库
+git add hello.txt//添加一个东西(注意先创建文件再添加)
+ssh-keygen -t rsa -C "418680861@qq.com"//生成秘钥
+git clone git@github.com:schacon/simplegit.git//下载某个项目的命令
+密码是springcloud
+git status -s//用于查看项目的当前状态
+git diff --cached//查看详细信息
+
+git add a.txt b.txt//一起添加两个
+git status -s//用于查看项目的当前状态
+git commit -m 'SNAPSHOT-0.0.4'//提交版本
+git rm hello.txt//删除(到缓存区)
+git rm -f hello.txt//删除(直接没)
+git rm --cached a.txt//删除(删除工作空间有)
+git reset hello.txt//删除(去除缓冲区中的,存疑)
+
+git add c.txt
+git status -s
+git mv c.txt c2.txt
+git mv c2.txt ./src/c3.txt
+
+git branch testing//创建新的分支(名叫testing)
+git branch//查看分支
+git checkout testing//切换分支
+git branch//查看分支
+git checkout master//切换分支
+git branch -d testing//删除分支
+git branch//查看分支
+
+git branch testing
+git checkout testing
+git add d.txt
+git status -s
+git commit -m "TEST-0.1"
+git checkout master
+git merge testing//合并分支里面的东西
+git branch
+
+git log//查看提交历史
+git log --oneline//在一行显示版本信息
+git log --oneline --graph//在一行显示详细的版本信息
+git log --oneline --reverse//正序在一行显示详细的版本信息(先提交的在前面)
+git log --author=tom//只显示tom的
+
+ssh -T git@github.com//连接网络上github数据库(密码为springcloud),显示hi xxx则连接成功
+git remote add origin git@github.com:yidayo/spring-cloud.git//连接在页面创建好的仓库(yidayo是username,斜线后面的是仓库名称)
+git push -u origin master//上传代码(密码springcloud)
+
+git add application.yml
+git commit -m 'app-info'
+git push -u origin master(密码springcloud)
